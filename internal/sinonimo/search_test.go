@@ -10,7 +10,7 @@ func TestSearch(t *testing.T) {
 		wordToSearch := "deseo"
 		wantedResults := []string{"aspiración", "ansia", "afán", "anhelo", "apetito", "pretensión", "capricho", "empeño", "antojo", "pasión", "ambición", "interés", "intención", "objetivo", "proyecto", "apetecer", "querer", "aspirar", "anhelar", "ambicionar", "ansiar", "codiciar", "suspirar", "pretender", "preferir", "aficionarse", "antojarse", "encapricharse", "prendarse", "pirrarse"}
 
-		searchResults, err := WordReference{}.search(wordToSearch)
+		searchResults, err := WordReference{}.Search(wordToSearch)
 
 		if err != nil {
 			t.Error("error while searching the world")
@@ -27,7 +27,7 @@ func TestSearch(t *testing.T) {
 		wordToSearch := "adios"
 		wantedResults := []string{"chao", "abur", "agur", "despedida", "hasta la vista", "hasta más ver"}
 
-		searchResults, err := WordReference{}.search(wordToSearch)
+		searchResults, err := WordReference{}.Search(wordToSearch)
 
 		if err != nil {
 			t.Error("error while searching the world")
@@ -44,7 +44,7 @@ func TestSearch(t *testing.T) {
 		wordToSearch := "asdasdjk"
 		wantedResults := []string{}
 
-		searchResults, err := WordReference{}.search(wordToSearch)
+		searchResults, err := WordReference{}.Search(wordToSearch)
 
 		if err != nil {
 			t.Error("error while searching the world")
