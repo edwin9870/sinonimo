@@ -21,7 +21,7 @@ type SearchSynonyms interface {
 type WordReference struct {
 }
 
-func (w WordReference) search(word string) ([]string, error) {
+func (w WordReference) Search(word string) ([]string, error) {
 	words := make([]string, 0)
 
 	res, err := http.Get("https://www.wordreference.com/sinonimos/" + word)
